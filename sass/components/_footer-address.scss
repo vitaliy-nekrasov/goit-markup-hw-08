@@ -1,0 +1,15 @@
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--btn-text-color);
+  transition: color 250ms var(--timing);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

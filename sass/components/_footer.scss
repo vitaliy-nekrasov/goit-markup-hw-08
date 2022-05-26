@@ -1,0 +1,21 @@
+.footer {
+  background-color: var(--hero-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__info {
+  display: flex;
+}
+.footer__logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--btn-text-color);
+  margin-bottom: 20px;
+
+  &--accent {
+    color: var(--accent-color);
+  }
+}

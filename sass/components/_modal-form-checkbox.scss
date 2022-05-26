@@ -1,0 +1,48 @@
+.modal-form__checkbox-label {
+  position: relative;
+}
+.modal-form__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &--no-checked {
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    transform: scale(0);
+    transition: transform 250ms var(--timing);
+  }
+  &--checked {
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    transform: scale(1);
+    transition: transform 250ms var(--timing);
+  }
+  &:not(:checked) ~ &--checked {
+    transform: scale(0);
+  }
+  &:not(:checked) ~ &--no-checked {
+    transform: scale(1);
+  }
+}
+.modal-form__checkbox-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  margin-left: 36px;
+}
+.modal-form__license-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}

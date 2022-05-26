@@ -1,0 +1,40 @@
+.clients__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients__card {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--social-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 250ms var(--timing);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+.clients__logo {
+  box-sizing: content-box;
+  padding: 18px 34px;
+  color: var(--social-color);
+  transition: color 250ms var(--timing);
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    color: var(--accent-color);
+  }
+}
