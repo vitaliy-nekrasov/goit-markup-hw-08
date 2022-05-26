@@ -1,31 +1,37 @@
 .hero {
   background-color: var(--hero-background-color);
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 600px;
-  max-width: 1600px;
+  max-width: 480px;
+  height: 400px;
   margin: 0 auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/overlay/overlay.jpg');
+    url('../images/overlay/overlay@480.jpg');
+  background-size: 480px 400px;
+}
+@media screen and(min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/overlay/overlay@960.jpg');
+  }
 }
 .hero__title {
+  display: inline-block;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--btn-text-color);
-
   margin-top: 0;
   margin-bottom: 30px;
 }
 .hero__modal-btn {
-  font-family: var(--main-font);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   letter-spacing: 0.06em;
   color: var(--btn-text-color);
@@ -35,6 +41,6 @@
   border-radius: 4px;
   border-color: var(--accent-color);
 
-  display: inline-block;
+  // display: inline-block;
   padding: 10px 32px;
 }

@@ -50,6 +50,12 @@ body {
   color: var(--main-color);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -61,6 +67,11 @@ body {
   .container {
     width: 480px;
   }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .header {
@@ -133,7 +144,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -228,5 +239,139 @@ body {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+
+.hero {
+  background-color: var(--hero-background-color);
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  max-width: 480px;
+  height: 400px;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/overlay/overlay@480.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/overlay/overlay@480.jpg");
+  background-size: 480px 400px;
+}
+
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/overlay/overlay@960.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/overlay/overlay@960.jpg");
+  }
+}
+
+.hero__title {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--btn-text-color);
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.hero__modal-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.06em;
+  color: var(--btn-text-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--accent-color);
+  padding: 10px 32px;
+}
+
+.quality__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.quality-card {
+  max-width: 450px;
+  height: 120px;
+  background: var(--portfolio-btn-back-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quality-card__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.quality-card__description {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section-work {
+  display: none;
+}
+
+.team {
+  background-color: var(--team-background-color);
+}
+
+.team__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.team-card {
+  max-width: 450px;
+  background: var(--btn-text-color);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.team-card__name {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.team-card__prof {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

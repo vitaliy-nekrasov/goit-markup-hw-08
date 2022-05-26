@@ -1,17 +1,17 @@
 .quality {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  margin-bottom: 0;
+  // display: flex;
+  // justify-content: center;
+  // margin-top: 0;
+  // margin-bottom: 0;
 }
 .quality__item {
-  width: 270px;
+  // width: 270px;
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
   }
 }
 .quality-card {
-  width: 270px;
+  max-width: 450px;
   height: 120px;
   background: var(--portfolio-btn-back-color);
   border-radius: 4px;
@@ -24,11 +24,10 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   margin-top: 0;
-  margin-bottom: 0;
   margin-bottom: 10px;
 }
 .quality-card__description {
