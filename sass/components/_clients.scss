@@ -1,18 +1,26 @@
 .clients__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .clients__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.clients__item {
+  &:nth-child(odd) {
+    margin-right: 30px;
+  }
+  &:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
 }
 .clients__card {
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid var(--social-color);
   box-sizing: border-box;
@@ -20,21 +28,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 250ms var(--timing);
+  // transition: border-color 250ms var(--timing);
 
-  &:hover,
-  &:focus {
-    border-color: var(--accent-color);
-  }
+  // &:hover,
+  // &:focus {
+  //   border-color: var(--accent-color);
+  // }
 }
 .clients__logo {
-  box-sizing: content-box;
-  padding: 18px 34px;
-  color: var(--social-color);
-  transition: color 250ms var(--timing);
+  fill: var(--social-color);
+  // transition: color 250ms var(--timing);
 
-  .clients__link:hover &,
-  .clients__link:focus & {
-    color: var(--accent-color);
-  }
+  // .clients__link:hover &,
+  // .clients__link:focus & {
+  //   fill: var(--accent-color);
+  // }
 }

@@ -365,13 +365,106 @@ img {
   margin-bottom: 30px;
 }
 
+.team-card__info {
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
 .team-card__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
   margin-top: 0;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .team-card__prof {
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.team-card__social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 24px;
+}
+
+.team-card__social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-card__social-logo {
+  color: var(--social-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--btn-text-color);
+  -webkit-transition: color 250ms var(--timing), background-color 250ms var(--timing);
+  transition: color 250ms var(--timing), background-color 250ms var(--timing);
+}
+
+.team-card__social-link:hover > .team-card__social-logo,
+.team-card__social-link:focus > .team-card__social-logo {
+  color: var(--btn-text-color);
+  background-color: var(--accent-color);
+}
+
+.clients__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.clients__item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.clients__item:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 30px;
+}
+
+.clients__card {
+  width: 210px;
+  height: 92px;
+  border: 1px solid var(--social-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clients__logo {
+  fill: var(--social-color);
 }
 /*# sourceMappingURL=main.css.map */
