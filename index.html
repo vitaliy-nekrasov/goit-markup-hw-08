@@ -24,39 +24,69 @@
   <body>
     <!-- ################# HEADER ############## -->
     <header class="header">
-      <div class="menu container">
-        <nav class="nav">
-          <a class="nav__logo" href="./index.html" lang="en"
-            ><span class="nav__logo--accent">Web</span>Studio</a
-          >
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link nav__link--active" href="">Студия</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com"
-              ><svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icon/icons.svg#mail"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111"
-              ><svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icon/icons.svg#phone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+      <div class="header__menu container">
+        <a class="header__logo" href="./index.html" lang="en"
+          ><span class="header__logo--accent">Web</span>Studio</a
+        >
+        <button
+          class="header__menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="burger__menu"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./images/icon/icons.svg#icon-menu"></use>
+            <use class="icon-cross" href="./images/icon/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+        <div class="burger__menu" id="burger__menu" data-menu>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--active" href="">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link" href="mailto:info@devstudio.com"
+                  ><svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/icon/icons.svg#mail"></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item contacts__item--tel">
+                <a class="contacts__link contacts__link--tel" href="tel:+380961111111"
+                  ><svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/icon/icons.svg#phone"></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="contacts__social-list">
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="">Instagram</a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="">Twitter</a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="">Facebook</a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -575,5 +605,6 @@
     </div>
     <!-- ############## SCRIPT ############### -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
