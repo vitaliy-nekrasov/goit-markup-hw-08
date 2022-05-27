@@ -1,14 +1,17 @@
 .footer-social {
-  margin-left: 70px;
-  margin-top: 12px;
-  display: flex;
-  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // margin-left: 70px;
+  // margin-top: 12px;
+  // display: flex;
+  // flex-direction: column;
 }
 .footer-social__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--btn-text-color);
   margin-top: 0;
@@ -16,6 +19,7 @@
 }
 .footer-social__list {
   display: flex;
+  justify-content: center;
 }
 .footer-social__item:not(:last-child) {
   margin-right: 10px;
