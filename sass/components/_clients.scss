@@ -20,10 +20,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // &:hover,
-  // &:focus {
-  //   border-color: var(--accent-color);
-  // }
+  transition: border-color 250ms var(--timing);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
   &:nth-child(odd) {
     margin-right: 30px;
   }
@@ -60,10 +61,10 @@
 }
 .clients__logo {
   fill: var(--social-color);
-  // transition: color 250ms var(--timing);
+  transition: fill 250ms var(--timing);
 
-  // .clients__link:hover &,
-  // .clients__link:focus & {
-  //   fill: var(--accent-color);
-  // }
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: var(--accent-color);
+  }
 }

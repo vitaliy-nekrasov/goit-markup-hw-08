@@ -1,13 +1,13 @@
 .leave-contacts {
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 41px;
-  padding-right: 39px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .leave-contacts__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
@@ -24,10 +24,14 @@
   letter-spacing: 0.01em;
   color: var(--secondary-color);
   cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .modal-form__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
+  // box-sizing: border-box;
   border-radius: 4px;
   width: 100%;
   font-size: inherit;
@@ -60,7 +64,7 @@
 }
 .modal-form__comment {
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
+  // box-sizing: border-box;
   border-radius: 4px;
   width: 100%;
   height: 120px;
@@ -80,8 +84,8 @@
     border: 1px solid var(--accent-color);
   }
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.16;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
