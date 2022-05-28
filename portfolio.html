@@ -23,39 +23,69 @@
   <body>
     <!-- ################# HEADER ############## -->
     <header class="header">
-      <div class="menu container">
-        <nav class="nav">
-          <a class="nav__logo" href="./index.html" lang="en"
-            ><span class="nav__logo--accent">Web</span>Studio</a
-          >
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="./index.html">Студия</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--active" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com"
-              ><svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icon/icons.svg#mail"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111"
-              ><svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icon/icons.svg#phone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+      <div class="header__menu container">
+        <a class="header__logo" href="./index.html" lang="en"
+          ><span class="header__logo--accent">Web</span>Studio</a
+        >
+        <button
+          class="header__menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="burger__menu"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./images/icon/icons.svg#icon-menu"></use>
+            <use class="icon-cross" href="./images/icon/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+        <div class="burger__menu" id="burger__menu" data-menu>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--active" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link" href="mailto:info@devstudio.com"
+                  ><svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/icon/icons.svg#mail"></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item contacts__item--tel">
+                <a class="contacts__link contacts__link--tel" href="tel:+380961111111"
+                  ><svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/icon/icons.svg#phone"></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="contacts__social-list">
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="">Instagram</a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="">Twitter</a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="">Facebook</a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -83,7 +113,33 @@
           <ul class="portfolio__card-list">
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img src="./images/portfolio/laptop.jpg" alt="laptop" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/laptop@354.webp 354w,
+                      ./images/portfolio/laptop@370.webp 370w,
+                      ./images/portfolio/laptop@450.webp 450w,
+                      ./images/portfolio/laptop@708.webp 708w,
+                      ./images/portfolio/laptop@740.webp 740w,
+                      ./images/portfolio/laptop@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/laptop@354.jpg 354w,
+                      ./images/portfolio/laptop@370.jpg 370w,
+                      ./images/portfolio/laptop@450.jpg 450w,
+                      ./images/portfolio/laptop@708.jpg 708w,
+                      ./images/portfolio/laptop@740.jpg 740w,
+                      ./images/portfolio/laptop@900.jpg 900w
+                    "
+                    src="./images/portfolio/laptop@354.jpg"
+                    alt="Ноутбук"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -97,12 +153,33 @@
             </li>
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img
-                  src="./images/portfolio/basketball-player.jpg"
-                  alt="basketball-player"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/basketball-player@354.webp 354w,
+                      ./images/portfolio/basketball-player@370.webp 370w,
+                      ./images/portfolio/basketball-player@450.webp 450w,
+                      ./images/portfolio/basketball-player@708.webp 708w,
+                      ./images/portfolio/basketball-player@740.webp 740w,
+                      ./images/portfolio/basketball-player@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/basketball-player@354.jpg 354w,
+                      ./images/portfolio/basketball-player@370.jpg 370w,
+                      ./images/portfolio/basketball-player@450.jpg 450w,
+                      ./images/portfolio/basketball-player@708.jpg 708w,
+                      ./images/portfolio/basketball-player@740.jpg 740w,
+                      ./images/portfolio/basketball-player@900.jpg 900w
+                    "
+                    src="./images/portfolio/basketball-player@354.jpg"
+                    alt="Игрок в баскетбол"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -116,7 +193,33 @@
             </li>
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img src="./images/portfolio/seafood.jpg" alt="seafood" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/seafood@354.webp 354w,
+                      ./images/portfolio/seafood@370.webp 370w,
+                      ./images/portfolio/seafood@450.webp 450w,
+                      ./images/portfolio/seafood@708.webp 708w,
+                      ./images/portfolio/seafood@740.webp 740w,
+                      ./images/portfolio/seafood@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/seafood@354.jpg 354w,
+                      ./images/portfolio/seafood@370.jpg 370w,
+                      ./images/portfolio/seafood@450.jpg 450w,
+                      ./images/portfolio/seafood@708.jpg 708w,
+                      ./images/portfolio/seafood@740.jpg 740w,
+                      ./images/portfolio/seafood@900.jpg 900w
+                    "
+                    src="./images/portfolio/seafood@354.jpg"
+                    alt="Seafood"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -130,12 +233,33 @@
             </li>
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img
-                  src="./images/portfolio/headphones.jpg"
-                  alt="headphones"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/headphones@354.webp 354w,
+                      ./images/portfolio/headphones@370.webp 370w,
+                      ./images/portfolio/headphones@450.webp 450w,
+                      ./images/portfolio/headphones@708.webp 708w,
+                      ./images/portfolio/headphones@740.webp 740w,
+                      ./images/portfolio/headphones@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/headphones@354.jpg 354w,
+                      ./images/portfolio/headphones@370.jpg 370w,
+                      ./images/portfolio/headphones@450.jpg 450w,
+                      ./images/portfolio/headphones@708.jpg 708w,
+                      ./images/portfolio/headphones@740.jpg 740w,
+                      ./images/portfolio/headphones@900.jpg 900w
+                    "
+                    src="./images/portfolio/headphones@354.jpg"
+                    alt="Headphones"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -149,7 +273,33 @@
             </li>
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img src="./images/portfolio/bricks.jpg" alt="bricks" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/bricks@354.webp 354w,
+                      ./images/portfolio/bricks@370.webp 370w,
+                      ./images/portfolio/bricks@450.webp 450w,
+                      ./images/portfolio/bricks@708.webp 708w,
+                      ./images/portfolio/bricks@740.webp 740w,
+                      ./images/portfolio/bricks@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/bricks@354.jpg 354w,
+                      ./images/portfolio/bricks@370.jpg 370w,
+                      ./images/portfolio/bricks@450.jpg 450w,
+                      ./images/portfolio/bricks@708.jpg 708w,
+                      ./images/portfolio/bricks@740.jpg 740w,
+                      ./images/portfolio/bricks@900.jpg 900w
+                    "
+                    src="./images/portfolio/bricks@354.jpg"
+                    alt="Bricks"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -163,7 +313,33 @@
             </li>
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img src="./images/portfolio/imac.jpg" alt="imac" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/imac@354.webp 354w,
+                      ./images/portfolio/imac@370.webp 370w,
+                      ./images/portfolio/imac@450.webp 450w,
+                      ./images/portfolio/imac@708.webp 708w,
+                      ./images/portfolio/imac@740.webp 740w,
+                      ./images/portfolio/imac@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/imac@354.jpg 354w,
+                      ./images/portfolio/imac@370.jpg 370w,
+                      ./images/portfolio/imac@450.jpg 450w,
+                      ./images/portfolio/imac@708.jpg 708w,
+                      ./images/portfolio/imac@740.jpg 740w,
+                      ./images/portfolio/imac@900.jpg 900w
+                    "
+                    src="./images/portfolio/imac@354.jpg"
+                    alt="Imac"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -177,7 +353,33 @@
             </li>
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img src="./images/portfolio/book.jpg" alt="book" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/book@354.webp 354w,
+                      ./images/portfolio/book@370.webp 370w,
+                      ./images/portfolio/book@450.webp 450w,
+                      ./images/portfolio/book@708.webp 708w,
+                      ./images/portfolio/book@740.webp 740w,
+                      ./images/portfolio/book@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/book@354.jpg 354w,
+                      ./images/portfolio/book@370.jpg 370w,
+                      ./images/portfolio/book@450.jpg 450w,
+                      ./images/portfolio/book@708.jpg 708w,
+                      ./images/portfolio/book@740.jpg 740w,
+                      ./images/portfolio/book@900.jpg 900w
+                    "
+                    src="./images/portfolio/book@354.jpg"
+                    alt="Book"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -191,12 +393,33 @@
             </li>
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img
-                  src="./images/portfolio/project-lab.jpg"
-                  alt="project-lab"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/project-lab@354.webp 354w,
+                      ./images/portfolio/project-lab@370.webp 370w,
+                      ./images/portfolio/project-lab@450.webp 450w,
+                      ./images/portfolio/project-lab@708.webp 708w,
+                      ./images/portfolio/project-lab@740.webp 740w,
+                      ./images/portfolio/project-lab@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/project-lab@354.jpg 354w,
+                      ./images/portfolio/project-lab@370.jpg 370w,
+                      ./images/portfolio/project-lab@450.jpg 450w,
+                      ./images/portfolio/project-lab@708.jpg 708w,
+                      ./images/portfolio/project-lab@740.jpg 740w,
+                      ./images/portfolio/project-lab@900.jpg 900w
+                    "
+                    src="./images/portfolio/project-lab@354.jpg"
+                    alt="Project-lab"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -210,12 +433,33 @@
             </li>
             <li class="portfolio-card">
               <div class="portfolio-card__overlay">
-                <img
-                  src="./images/portfolio/hands-on-laptop.jpg"
-                  alt="hands-on-laptop"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/hands-on-laptop@354.webp 354w,
+                      ./images/portfolio/hands-on-laptop@370.webp 370w,
+                      ./images/portfolio/hands-on-laptop@450.webp 450w,
+                      ./images/portfolio/hands-on-laptop@708.webp 708w,
+                      ./images/portfolio/hands-on-laptop@740.webp 740w,
+                      ./images/portfolio/hands-on-laptop@900.webp 900w
+                    "
+                    type="image/webp"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/hands-on-laptop@354.jpg 354w,
+                      ./images/portfolio/hands-on-laptop@370.jpg 370w,
+                      ./images/portfolio/hands-on-laptop@450.jpg 450w,
+                      ./images/portfolio/hands-on-laptop@708.jpg 708w,
+                      ./images/portfolio/hands-on-laptop@740.jpg 740w,
+                      ./images/portfolio/hands-on-laptop@900.jpg 900w
+                    "
+                    src="./images/portfolio/hands-on-laptop@354.jpg"
+                    alt="Hands-on-laptop"
+                    sizes="(min-width: 1200px)370px,(min-width: 768px)354px,450px"
+                  />
+                </picture>
                 <p class="portfolio-card__text">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
@@ -242,7 +486,7 @@
             <ul class="address">
               <li class="address__item">
                 <a
-                  class="address__link"
+                  class="address__link address__link--map"
                   href="https://goo.gl/maps/CviUbPJFQTQComtV8"
                   target="_blank"
                   >г. Киев, пр-т Леси Украинки, 26</a
@@ -303,5 +547,7 @@
         </div>
       </div>
     </footer>
+    <!-- ############## SCRIPT ############### -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
