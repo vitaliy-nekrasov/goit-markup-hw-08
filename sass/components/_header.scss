@@ -31,7 +31,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 2;
+  z-index: 3;
 
   & .icon-cross {
     display: none;
@@ -69,5 +69,6 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--btn-text-color);
+    z-index: 2;
   }
 }
