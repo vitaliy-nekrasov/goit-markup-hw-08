@@ -6,6 +6,18 @@
   border-radius: 0px 0px 4px 4px;
   &:not(:last-child) {
     margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
   }
 }
 .team-card__info {

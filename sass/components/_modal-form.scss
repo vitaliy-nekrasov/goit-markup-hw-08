@@ -27,6 +27,9 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+    @media screen and (min-width: 768px) {
+      color: var(--secondary-color);
+    }
   }
 }
 .modal-form__input {

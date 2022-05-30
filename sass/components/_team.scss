@@ -11,5 +11,8 @@
   margin-bottom: 30px;
 }
 .team__list {
-  // display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
