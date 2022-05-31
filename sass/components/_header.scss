@@ -14,6 +14,10 @@
     align-items: normal;
     justify-content: normal;
   }
+  // @media screen and (min-width: 1200px) {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 }
 .header__logo {
   font-family: 'Raleway', sans-serif;

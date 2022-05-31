@@ -14,9 +14,21 @@
     width: 354px;
     &:nth-child(odd) {
       margin-right: 30px;
+      @media screen and (min-width: 1200px) {
+        margin-right: 0;
+      }
     }
     &:not(:nth-last-child(-n + 2)) {
       margin-bottom: 30px;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
     }
   }
 }

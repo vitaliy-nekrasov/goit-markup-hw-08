@@ -1,8 +1,15 @@
 .subscribe {
   // display: block;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 }
 .subscribe__form {
   // position: relative;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 .subscribe__label {
   display: flex;
@@ -25,6 +32,12 @@
     flex-direction: column;
     align-items: center;
   }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    display: block;
+    text-align: left;
+    margin-right: 12px;
+  }
 }
 .subscribe__input {
   font-size: 16px;
@@ -44,6 +57,9 @@
   border-radius: 4px;
   width: 450px;
   background-color: transparent;
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 
   &::placeholder {
     font-size: 16px;
