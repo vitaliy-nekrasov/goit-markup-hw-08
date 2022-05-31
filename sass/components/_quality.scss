@@ -1,21 +1,17 @@
 .quality {
-  // display: flex;
-  // justify-content: center;
-  // margin-top: 0;
-  // margin-bottom: 0;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 .quality__item {
-  // width: 270px;
   &:not(:last-child) {
     margin-bottom: 30px;
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
     }
   }
+
   @media screen and (min-width: 768px) {
     width: 354px;
     &:nth-child(odd) {
@@ -28,6 +24,7 @@
       }
     }
   }
+
   @media screen and (min-width: 1200px) {
     width: 270px;
     &:not(:last-child) {
@@ -36,14 +33,14 @@
   }
 }
 .quality-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 450px;
   height: 120px;
   background: var(--portfolio-btn-back-color);
   border-radius: 4px;
   margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .quality-card__title {
   font-weight: 700;
@@ -54,6 +51,7 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
+
   @media screen and (min-width: 768px) {
     text-align: left;
   }

@@ -1,21 +1,17 @@
 .footer-social {
   padding-top: 60px;
   padding-bottom: 60px;
+
   @media screen and (min-width: 768px) {
     display: inline-block;
-    padding: 0;
     vertical-align: top;
+    padding: 0;
     margin-top: 10px;
   }
+
   @media screen and (min-width: 1200px) {
-    // margin-right: 93px;
     margin-top: 0;
   }
-
-  // margin-left: 70px;
-  // margin-top: 12px;
-  // display: flex;
-  // flex-direction: column;
 }
 .footer-social__title {
   font-weight: 700;
@@ -27,6 +23,7 @@
   color: var(--btn-text-color);
   margin-top: 0;
   margin-bottom: 20px;
+
   @media screen and (min-width: 1200px) {
     text-align: left;
   }

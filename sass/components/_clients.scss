@@ -6,6 +6,7 @@
   letter-spacing: 0.03em;
   margin-top: 0;
   margin-bottom: 30px;
+
   @media screen and (min-width: 1200px) {
     font-size: 36px;
     line-height: 1.17;
@@ -15,47 +16,54 @@
 .clients__list {
   display: flex;
   flex-wrap: wrap;
+
   @media screen and (min-width: 768px) {
     justify-content: space-between;
   }
 }
 .clients__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-basis: 210px;
   height: 92px;
   border: 1px solid var(--social-color);
   box-sizing: border-box;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: border-color 250ms var(--timing);
+
   &:hover,
   &:focus {
     border-color: var(--accent-color);
   }
+
   &:nth-child(odd) {
     margin-right: 30px;
     @media screen and (min-width: 768px) {
       margin-right: 0;
     }
   }
+
   &:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
     }
   }
+
   @media screen and (max-width: 479px) {
     &:nth-child(odd) {
       margin-right: auto;
     }
   }
+
   @media screen and (max-width: 449px) {
     flex-grow: 1;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
+
   @media screen and (min-width: 768px) {
     flex-basis: 226px;
     &:not(:nth-last-child(-n + 3)) {
@@ -65,30 +73,21 @@
       }
     }
   }
+
   @media screen and (min-width: 1200px) {
     flex-basis: 170px;
   }
 }
 .clients__link {
   padding: 15px 51px;
+
   @media screen and (min-width: 768px) {
     padding: 15px 59px;
   }
+
   @media screen and (min-width: 1200px) {
     padding: 15px 32px;
   }
-}
-.clients__card {
-  // width: 210px;
-  // height: 92px;
-  // border: 1px solid var(--social-color);
-  // box-sizing: border-box;
-  // border-radius: 4px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-
-  // transition: border-color 250ms var(--timing);
 }
 .clients__logo {
   fill: var(--social-color);

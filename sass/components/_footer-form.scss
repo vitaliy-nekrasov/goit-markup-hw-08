@@ -1,11 +1,9 @@
 .subscribe {
-  // display: block;
   @media screen and (min-width: 1200px) {
     margin-left: auto;
   }
 }
 .subscribe__form {
-  // position: relative;
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: flex-end;
@@ -14,7 +12,6 @@
 .subscribe__label {
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: column;
   justify-content: center;
   font-weight: 700;
   font-size: 14px;
@@ -24,14 +21,14 @@
   text-transform: uppercase;
   color: var(--btn-text-color);
   margin-bottom: 20px;
-  // margin-top: 12px;
-  // margin-left: 93px;
+
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     justify-content: normal;
     flex-direction: column;
     align-items: center;
   }
+
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
     display: block;
@@ -40,11 +37,10 @@
   }
 }
 .subscribe__input {
-  font-size: 16px;
-  line-height: 1.25;
   display: flex;
   flex-grow: 1;
-  // align-items: center;
+  font-size: 16px;
+  line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   padding-top: 15px;
@@ -53,34 +49,29 @@
   margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
-  // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   width: 450px;
   background-color: transparent;
-  @media screen and (min-width: 1200px) {
-    width: 358px;
-  }
 
   &::placeholder {
     font-size: 16px;
     line-height: 1.25;
-    //   display: flex;
-    //   align-items: center;
     letter-spacing: 0.03em;
     color: var(--contacts-link-color);
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 .subscribe__btn {
-  // position: absolute;
-  // bottom: 0;
-  // right: -212px;
+  display: flex;
+  align-items: center;
+  text-align: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   width: 200px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--btn-text-color);
   background-color: var(--accent-color);

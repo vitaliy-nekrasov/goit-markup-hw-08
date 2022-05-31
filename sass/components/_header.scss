@@ -1,23 +1,16 @@
 .header {
   position: relative;
-  // font-weight: 500;
-  // font-size: 14px;
-  // line-height: 1.14;
-  // letter-spacing: 0.02em;
   border-bottom: 1px solid var(--border-color);
 }
 .header__menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   @media screen and (min-width: 768px) {
     align-items: normal;
     justify-content: normal;
   }
-  // @media screen and (min-width: 1200px) {
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
 }
 .header__logo {
   font-family: 'Raleway', sans-serif;
@@ -25,9 +18,15 @@
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  color: var(--logo-color);
+
   padding-top: 16px;
   padding-bottom: 16px;
-  color: var(--logo-color);
+
+  &--accent {
+    color: var(--accent-color);
+  }
+
   @media screen and (min-width: 768px) {
     padding-top: 26px;
     padding-bottom: 26px;
@@ -40,21 +39,16 @@
     padding-bottom: 25px;
     margin-right: 93px;
   }
-  // margin-right: 93px;
-  &--accent {
-    color: var(--accent-color);
-  }
 }
 .header__menu-button {
   display: inline-flex;
+  z-index: 3;
+
   margin: 0;
   padding: 0;
+
   border: none;
   background-color: transparent;
-  z-index: 3;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 
   & .icon-cross {
     display: none;
@@ -67,11 +61,15 @@
   &:focus .icon-menu {
     fill: var(--accent-color);
   }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .header__menu-button.is-open {
   & .icon-cross {
     display: block;
   }
+
   & .icon-menu {
     display: none;
   }
@@ -79,14 +77,22 @@
 .burger__menu {
   display: none;
   position: absolute;
-  // top: 100%;
   left: 0;
   top: 0;
+
   width: 100vw;
   height: 100vh;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
+
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--btn-text-color);
+    z-index: 2;
+  }
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -94,12 +100,5 @@
     padding: 0;
     width: auto;
     height: 80px;
-  }
-  &.is-open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: var(--btn-text-color);
-    z-index: 2;
   }
 }

@@ -4,20 +4,28 @@
 .portfolio-filter {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
   margin-bottom: 40px;
+
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     justify-content: center;
     margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 .portfolio-filter__item {
   &:not(:last-child) {
     margin-right: 8px;
   }
+
   &:not(:nth-last-child(-n + 2)) {
     margin-bottom: 15px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 }
 .portfolio-filter__btn {
@@ -48,5 +56,4 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  // flex-wrap: wrap;
 }

@@ -1,6 +1,9 @@
 .modal-form__checkbox-label {
   position: relative;
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }
 .modal-form__checkbox {
   position: absolute;
@@ -16,20 +19,20 @@
     position: absolute;
     top: 3px;
     left: 0px;
-    // left: 12px;
     cursor: pointer;
     transform: scale(0);
     transition: transform 250ms var(--timing);
   }
+
   &--checked {
     position: absolute;
     top: 3px;
     left: 0px;
-    // left: 12px;
     cursor: pointer;
     transform: scale(1);
     transition: transform 250ms var(--timing);
   }
+
   &:not(:checked) ~ &--checked {
     transform: scale(0);
   }
@@ -43,6 +46,11 @@
   letter-spacing: 0.03em;
   color: var(--secondary-color);
   margin-left: 24px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal-form__license-link {
   font-size: 12px;
@@ -50,4 +58,9 @@
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
