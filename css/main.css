@@ -370,6 +370,8 @@ img {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
+  -webkit-transition: color 250ms var(--timing);
+  transition: color 250ms var(--timing);
 }
 
 .contacts__link--tel {
@@ -411,6 +413,9 @@ img {
     font-size: 14px;
     line-height: 1.14;
     margin-bottom: 0;
+  }
+  .contacts__link:hover, .contacts__link:focus {
+    color: var(--accent-color);
   }
 }
 
